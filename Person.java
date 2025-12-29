@@ -15,7 +15,7 @@ public class Person {
         boolean entry = true;
         while(entry == true){
         System.out.println("Enter the name of the person.");                
-        String name = sc.nextLine();                                        // problem!!! not reading this line
+        String name = sc.nextLine();                                        // problem!!! not reading this line after 1st loop
         System.out.println("Enter the age of the person.");
         int age = sc.nextInt();
         Person person1 = new Person(name, age);
