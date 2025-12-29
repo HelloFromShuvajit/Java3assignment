@@ -10,7 +10,7 @@ public class Person {
             System.out.println("The name of the person is:" + personName);
             System.out.println("The age of the person is:" + personAge);
         }
-    public static void main(String[] ags){
+    public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         boolean entry = true;
         while(entry == true){
@@ -22,7 +22,7 @@ public class Person {
         person1.getInfo();
         System.out.println("Do you want to enter another person.\n Y for yes.");
         char anotherEntry = sc.next().charAt(0);
-        if (anotherEntry != 'Y'){
+        if (anotherEntry != 'Y' && anotherEntry != 'y'){
         entry = false;
         }
 
