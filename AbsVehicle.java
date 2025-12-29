@@ -143,7 +143,6 @@ class MotorcycleRecord{
     int i= 0;
     while (entryChoice == true){
       i++;
-
     System.out.println("Enter the make of the car:");
     String makeCar = s.nextLine();
   
