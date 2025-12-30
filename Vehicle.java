@@ -5,7 +5,7 @@ public class Vehicle {
          Scanner sc = new Scanner(System.in);
        while(true){
     System.out.println("----------Welcome to Vehicle rental service.----------");
-    System.out.println("Enter 1 for filling up the details of a vehicle\nEnter 2 for displaying the details of the vehicle.\nEnter 3 for filling up the deatils of a car.\nEnter 4 for displaying the details of the car.\nEnter 5 for filling up the details of a motorcycle.\nEnter 6 for displaying the details of the motorcycle.\nEnter 7 to exit.");
+    System.out.println("Enter 1 for filling up the details of a vehicle\nEnter 2 for filling up the deatils of a car.\nEnter 3 for filling up the details of a motorcycle.\nEnter 4 to exit.");
     int choice = sc.nextInt();
             Car carNew = new Car();
             VehicleClass vehicleNew = new VehicleClass();
@@ -21,11 +21,10 @@ public class Vehicle {
             System.out.println("Enter the rental price of the vehicle:");
             double rentalPrice = sc.nextDouble();
             vehicleNew.setInformation(brand, model, year, rentalPrice);
+            vehicleNew.displayInformation();
+
             break;
         case 2:
-            vehicleNew.displayInformation();
-            break;
-        case 3:
             System.out.println("Enter the brand of the car:");
             String carBrand = sc.next();
             System.out.println("Enter the model of the car:");
@@ -38,12 +37,10 @@ public class Vehicle {
             int seats = sc.nextInt();
             carNew.setInformation(carBrand, carModel, carYear, carRentalPrice);
             carNew.setNumberofSeats(seats);
-            break;
-        case 4:
             carNew.displayInformation();
             carNew.displaySeatNumber();
             break;
-        case 5:
+        case 3:
             System.out.println("Enter the brand of the motorcycle:");
             String motoBrand = sc.next();
             System.out.println("Enter the model of the motorcycle:");
@@ -56,12 +53,10 @@ public class Vehicle {
             int engineCapacity = sc.nextInt();
             motorcycleNew.setInformation(motoBrand, motoModel, motoYear, motoRentalPrice);
             motorcycleNew.setEngineCapacity(engineCapacity);
-            break;
-        case 6:
             motorcycleNew.displayInformation();
             motorcycleNew.displayEngineCapacity();
             break;
-        case 7:
+        case 4:
             System.out.println("Exiting the program. Thank you!");
             return;
         default:
