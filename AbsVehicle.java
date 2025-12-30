@@ -125,9 +125,9 @@ class MotorcycleRecord{
     
     System.out.println("Enter the type of fuel of the car:");
     String fuelCar = s.nextLine();                                  
-     s.nextLine();            // s.skip("\\n");
-               //to remove /n issue
-    System.out.println(fuelCar);
+            //s.skip("\\R");
+    s.nextLine();            
+               //to remove \n issue
             carMap.put(i,new CarRecord(makeCar, modelCar, yearCar, priceCar, numdoorsCar,fuelCar));
 
     System.out.println("Do want to enter another car details? [Y/N]");
@@ -198,7 +198,7 @@ class MotorcycleRecord{
     s.skip("\\R");           //to remove /n issue
     motorMap.put(i,new MotorcycleRecord(makeMotor, modelMotor, yearMotor, priceMotor, hasSidecar,engineCapacity));
 
-    System.out.println("Do want to enter another car details? [Y/N]");
+    System.out.println("Do want to enter another motorcycle details? [Y/N]");
     char newcarEntry = s.next().charAt(0);
     if (newcarEntry == 'N' || newcarEntry == 'n'){
         entryChoice = false; 
