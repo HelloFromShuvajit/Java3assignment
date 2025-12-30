@@ -1,7 +1,8 @@
-import java.util.*;
-public class Vehicle{
-   public static void main(String[] args){
-       Scanner sc = new Scanner(System.in);
+import java.util.Scanner;
+
+public class Vehicle {
+    public static void main(String[] args) {
+         Scanner sc = new Scanner(System.in);
        while(true){
     System.out.println("----------Welcome to Vehicle rental service.----------");
     System.out.println("Enter 1 for filling up the details of a vehicle\nEnter 2 for displaying the details of the vehicle.\nEnter 3 for filling up the deatils of a car.\nEnter 4 for displaying the details of the car.\nEnter 5 for filling up the details of a motorcycle.\nEnter 6 for displaying the details of the motorcycle.\nEnter 7 to exit.");

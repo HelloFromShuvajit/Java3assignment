@@ -120,14 +120,13 @@ class MotorcycleRecord{
     System.out.println("Enter the price of the car:");
     double priceCar = s.nextDouble();
     
+    System.out.println("Enter the type of fuel of the car:");
+    String fuelCar = s.nextLine(); 
+    
     System.out.println("Enter the number of doors of the car:");
     int numdoorsCar = s.nextInt();
-    
-    System.out.println("Enter the type of fuel of the car:");
-    String fuelCar = s.nextLine();                                  
-            //s.skip("\\R");
-    s.nextLine();            
-               //to remove \n issue
+                                     
+    s.skip("\\R");           //to remove /n issue
             carMap.put(i,new CarRecord(makeCar, modelCar, yearCar, priceCar, numdoorsCar,fuelCar));
 
     System.out.println("Do want to enter another car details? [Y/N]");
@@ -203,6 +202,11 @@ class MotorcycleRecord{
     if (newcarEntry == 'N' || newcarEntry == 'n'){
         entryChoice = false; 
     }
+    
+                for (Map.Entry<Integer, MotorcycleRecord> entry : motorMap.entrySet()) {
+                  System.out.println("Motor Cycle ID: " + entry.getKey());
+                  entry.getValue().displayMotorCycle();
+                } 
     }
   }
             public double calculateSpeed(){
