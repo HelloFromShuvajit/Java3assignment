@@ -22,11 +22,12 @@ public class Person {
         person1.getInfo();
         System.out.println("Do you want to enter another person.\n Y for yes.");
         char anotherEntry = sc.next().charAt(0);
+        sc.skip("\\R"); // sc.nextLine();
         if (anotherEntry != 'Y' && anotherEntry != 'y'){
         entry = false;
         }
+    }        
 
-    }
     }
 }
 
