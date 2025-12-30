@@ -4,13 +4,12 @@ import java.util.Map;
 public class AbsVehicle {
             public static void main(String[] args){
               
-                System.out.println("Enter the vehicle details.");
+                System.out.println("----------Enter the vehicle details.----------");
                 Scanner sc = new Scanner(System.in);
                 System.out.println("What type of vehicle do you want to add.\n1 for Car.\n2 for Motorcycle.\n3 to see added car details\n4 to see added motorcycle details\n5 for exit.");
                 int vehicleChoice= sc.nextInt();
                 Car carNew= new Car();
                 Motorcycle motorcycleNew= new Motorcycle();
-
 
                 switch (vehicleChoice) {
                   case 1:
