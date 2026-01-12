@@ -14,7 +14,7 @@ public class Runners {
                 threadC.start();
                 threadB.start();
                 threadA.start();
-                threadA.join();
+                threadA.join(); // join() stops the others threads while one running
                 threadB.join();
                 threadC.join();
         }
@@ -46,7 +46,7 @@ class Runner implements Runnable{
         if(distance >= trackDistance)
         {
             System.out.println(name + " wins the race." );
-                            System.exit(0);
+                            System.exit(0); //This stops the whole program, which was needed to see which thread finishes the program 1st.
 
             
         }
